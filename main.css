@@ -1,0 +1,103 @@
+:root {
+    --background-color: #B5C5C5;
+    --border-color: #E9B8AC;
+    --textfields-background-color: #F6DCD7; 
+    --font-color: #985C41; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--background-color);
+    color: var(--font-color);
+}
+
+
+header {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+input, button {
+    appearance: none;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+#tasks-form {
+    display: flex;
+}
+
+#new-task-input {
+    /*makes the components take full width while maintaining the specified padding */
+    flex: 1 1 0%;
+    background-color: var(--textfields-background-color);
+    padding: 1rem;
+    margin: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 1.25rem;
+    color: var(--font-color);
+    font-size: 1rem;
+}
+
+#new-task-input::placeholder {
+    color: var(--font-color);
+}
+
+#submit-task-button {
+    background: var(--textfields-background-color);
+    padding: 1rem;
+    border-radius: 1.25rem;
+    border: 2px solid var(--border-color);
+    margin: 1rem;
+    color: var(--font-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+main {
+    flex: 1 1 0%;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto
+}
+
+.task-list {
+    padding: 1rem;
+}
+
+#tasks .task {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--textfields-background-color);
+    color: var(--font-color);
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 2px solid var(--border-color);
+    margin-bottom: 1rem;
+}
+
+#tasks .task .new-task {
+    color: var(--font-color);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#tasks .task .actions .delete-task-button, .edit-task-button {
+    color: var(--font-color);
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 1rem;
+}
